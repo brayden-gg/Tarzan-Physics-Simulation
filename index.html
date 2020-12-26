@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="p5.min.js"></script>
+    <title>Tarzan Simulation</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div id="instructions" style="font-family: Raleway">
+            <h3 style="width: 1200px">Instructions:</h3>
+            <ul style="font-family: open sans">
+                <li>Drag the slider or use up/down arrow to adjust initial velocity. </li>
+                <li>Press the reset button or the enter key to restart the simulation.</li>
+                <li>Press the space bar or use auto-jump (default) to launch Tarzan off the rope and reach Jane.</li>
+            </ul>
+        </div>
+        <a href="problem.png" style="margin-right: 1rem"><button>Original Problem</button></a>
+        <button id="btn" onclick="toggleText()">Hide Instructions</button>
+    </div>
+
+
+    <script>
+        function toggleText() {
+            let instructions = document.getElementById('instructions');
+            let button = document.getElementById('btn');
+            btn.innerText = instructions.style.display == 'none' ? 'Hide Instructions' : 'Show Instructions';
+            instructions.style.display = instructions.style.display == 'none' ? '' : 'none';
+        }
+    </script>
+    <script src="Body.js"></script>
+    <script src="Person.js"></script>
+    <script src="Rope.js"></script>
+    <script src="sketch.js"></script>
+
+</body>
+
+</html>
